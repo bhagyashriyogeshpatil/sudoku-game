@@ -1,6 +1,12 @@
 
 class Board:
+    """
+    Represents a Sudoku board.
+    """
     def __init__(self, board):
+        """
+        Initializes a Sudoku board.
+        """       
         self.board = board
 
     def print_board(self):
@@ -25,6 +31,13 @@ class Board:
             print()
 
     def find_empty_cell(self):
+        """
+        Find the first empty cell in the Sudoku board.
+
+        Returns:
+            tuple or None: A tuple containing the row and column indices of the first empty cell,
+                or None if no empty cell is found.
+        """
         for row in range(len(self.board)):
             try:
                 col = self.board[row].index(0)
@@ -35,6 +48,16 @@ class Board:
         return None
 
     def confirm_valid(self, empty, num):
+        """
+        Check if placing a number in a specific cell is valid.
+
+        Args:
+            empty (tuple): A tuple containing the row and column indices of the cell.
+            num (int): The number to be placed in the cell.
+
+        Returns:
+            bool: True if placing the number is valid, False otherwise.
+        """
         row, col = empty
         return (
             self.valid_in_row(row, num) and
@@ -43,16 +66,46 @@ class Board:
         )
 
     def valid_in_row(self, row, num):
+        """
+        Check if a number is valid in a specific row.
+        Args:
+            row (int): The row index.
+            num (int): The number to be checked.
+
+        Returns:
+            bool: True if the number is not present in the row, False otherwise.
+        """
         row_values = self.board[row]
         return num not in row_values
 
-    def valid_in_col(self, col, num):  
+    def valid_in_col(self, col, num): 
+        """
+        Check if a number is valid in a specific column.
+
+        Args:
+            col (int): The column index.
+            num (int): The number to be checked.
+
+        Returns:
+            bool: True if the number is not present in the column, False otherwise.
+        """ 
         for row in range(len(self.board)):
             if self.board[row][col] == num:
                 return False
         return True 
 
     def valid_in_square(self, row, col, num):
+        """
+        Check if a number is valid in a specific 3x3 square.
+
+        Args:
+            row (int): The row index of the cell.
+            col (int): The column index of the cell.
+            num (int): The number to be checked.
+
+        Returns:
+            bool: True if the number is not present in the square, False otherwise.
+        """
         row_start = (row // 3) * 3
         col_start = (col // 3) * 3
         for row_no in range(row_start, row_start + 3):
@@ -63,7 +116,10 @@ class Board:
 
     def solve_sudoku(self):
         """
-         Solves a Sudoku puzzle recursively using backtracking algorithm.
+        Solves a Sudoku puzzle recursively using backtracking algorithm.
+
+        Returns:
+            bool: True if the puzzle is solved successfully, False otherwise.
         """
         empty_cell = self.find_empty_cell()
 
