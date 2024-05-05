@@ -28,7 +28,6 @@ class Board:
         for row in range(len(self.board)):
             try:
                 col = self.board[row].index(0)
-                print("Tuple: ", row, col)
                 return row, col
             # Handle the ValueError exception that is thrown if 0 is not found
             except ValueError:
@@ -36,6 +35,21 @@ class Board:
         return None
 
     def confirm_valid(self, empty, num):
+        print("Empty: ", empty)
+        row, col = empty
+        return (
+            self.valid_in_row(row, num) and
+            self.valid_in_col(col, num) and
+            self.valid_in_square(row, col, num)
+        )
+
+    def valid_in_row(self, row, num):
+        pass
+
+    def valid_in_col(self, col, num):  
+        pass
+
+    def valid_in_square(self, row, col, num):
         pass
 
     def solve_sudoku(self):
@@ -43,7 +57,6 @@ class Board:
          Solves a Sudoku puzzle recursively using backtracking algorithm.
         """
         empty_cell = self.find_empty_cell()
-        print("Empty cell", empty_cell)
 
         # If no empty cell is found, the puzzle is solved
         if empty_cell is None:
