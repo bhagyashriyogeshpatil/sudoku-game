@@ -147,6 +147,12 @@ class Board:
         # If no number can be placed in the empty cell, backtrack
         return False
 
+    def play_sudoku(self):
+        """
+        Allows users to play Sudoku interactively by entering their guesses for empty cells.
+        """
+        row = input("Enter the row to insert number (1-9) or 'q' to quit/solved puzzle: ")
+        print(row)
 
 def main():
     print("Welcome to Sudoku Game")
@@ -164,6 +170,8 @@ def main():
     gameboard = Board(puzzle)
     print('Puzzle to solve:')
     gameboard.print_board()
+    print("\nLet's play Sudoku!\n")
+    gameboard.play_sudoku()
     if gameboard.solve_sudoku():
         print('\nSolved puzzle:')
         gameboard.print_board()    
