@@ -37,6 +37,9 @@ class Board:
     def confirm_valid(self, empty, num):
         print("Empty: ", empty)
         row, col = empty
+        print("valid_in_row: ", self.valid_in_row(row, num))
+        print("valid_in_col: ", self.valid_in_col(col, num))
+        print("valid_in_square: ", self.valid_in_square(row, col, num))
         return (
             self.valid_in_row(row, num) and
             self.valid_in_col(col, num) and
@@ -44,7 +47,9 @@ class Board:
         )
 
     def valid_in_row(self, row, num):
-        pass
+        row_values = self.board[row]
+        print("Row value: ",row_values)
+        return num not in row_values
 
     def valid_in_col(self, col, num):  
         pass
