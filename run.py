@@ -151,8 +151,19 @@ class Board:
         """
         Allows users to play Sudoku interactively by entering their guesses for empty cells.
         """
-        row = input("Enter the row to insert number (1-9) or 'q' to quit/solved puzzle: ")
-        print(row)
+        while True:
+            row = input("Enter the row to insert number (1-9) or 'q' to quit/solved puzzle: ")
+            if row.lower() == 'q':
+                print("Quitting the game.")
+                break
+            col = input("Enter the column to insert number (1-9) or 'q' to quit/solved puzzle: ")
+            if col.lower() == 'q':
+                print("Quitting the game.")
+                break
+            num = input("Enter a number (1-9) or 'q' to quit/solved puzzle: ")
+            if num.lower() == 'q':
+                print("Quitting the game.")
+                break
 
 def main():
     print("Welcome to Sudoku Game")
