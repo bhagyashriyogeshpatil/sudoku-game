@@ -24,6 +24,19 @@ class Board:
                 print("\n-----------------------------", end='')
             print()
 
+    def find_empty_cell(self):
+        for row in range(len(self.board)):
+            try:
+                col = self.board[row].index(0)
+                print("Tuple: ", row, col)
+                return row, col
+            # Handle the ValueError exception that is thrown if 0 is not found
+            except ValueError:
+                pass
+        return None
+
+
+
 
 def main():
     print("Welcome to Sudoku Game")
@@ -41,6 +54,7 @@ def main():
     gameboard = Board(puzzle)
     print('Puzzle to solve:')
     gameboard.print_board()
+    gameboard.find_empty_cell()
 
 if __name__=="__main__":
     main()
