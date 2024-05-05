@@ -35,16 +35,7 @@ class Board:
         return None
 
     def confirm_valid(self, empty, num):
-        print("Empty: ", empty)
         row, col = empty
-        print("valid_in_row: ", self.valid_in_row(row, num))
-        print("valid_in_col: ", self.valid_in_col(col, num))
-        print("valid_in_square: ", self.valid_in_square(row, col, num))
-        print("confirm_valid: ", (
-            self.valid_in_row(row, num) and
-            self.valid_in_col(col, num) and
-            self.valid_in_square(row, col, num)
-        ))
         return (
             self.valid_in_row(row, num) and
             self.valid_in_col(col, num) and
@@ -64,8 +55,6 @@ class Board:
     def valid_in_square(self, row, col, num):
         row_start = (row // 3) * 3
         col_start = (col // 3) * 3
-        print("row_start: ", row_start)
-        print("col_start: ", col_start)
         for row_no in range(row_start, row_start + 3):
             for col_no in range(col_start, col_start + 3):
                 if self.board[row_no][col_no] == num:
@@ -86,13 +75,10 @@ class Board:
 
         # Try placing numbers 1 to 9 in the empty cell
         for guess in range(1, 10):
-            print()
-            print("Guess: ", guess)
             
             # Check if the guessed number is valid
             if self.confirm_valid((row, col), guess):
                 # Place the guessed number in the empty cell
-                print("Guess Placed: ", guess)
                 self.board[row][col] = guess
                 
                 # Recursively try solving the puzzle with the guessed number
@@ -122,7 +108,11 @@ def main():
     gameboard = Board(puzzle)
     print('Puzzle to solve:')
     gameboard.print_board()
-    gameboard.solve_sudoku()
+    if gameboard.solve_sudoku():
+        print('\nSolved puzzle:')
+        gameboard.print_board()    
+    else:
+        print('\nThe provided puzzle is unsolvable.')
 
 if __name__=="__main__":
     main()
