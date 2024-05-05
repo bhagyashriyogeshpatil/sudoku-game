@@ -52,7 +52,13 @@ class Board:
         return num not in row_values
 
     def valid_in_col(self, col, num):  
-        pass
+        for row in range(len(self.board)):
+            if self.board[row][col] == num:
+                print("row in valid_in_col: ", row)
+                print("col in valid_in_col: ", col)
+                print("Col value: ",self.board[row][col])
+                return False
+        return True 
 
     def valid_in_square(self, row, col, num):
         pass
@@ -71,7 +77,9 @@ class Board:
 
         # Try placing numbers 1 to 9 in the empty cell
         for guess in range(1, 10):
+            print()
             print("Guess: ", guess)
+            
             # Check if the guessed number is valid
             if self.confirm_valid((row, col), guess):
                 # Place the guessed number in the empty cell
