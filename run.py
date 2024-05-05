@@ -40,6 +40,11 @@ class Board:
         print("valid_in_row: ", self.valid_in_row(row, num))
         print("valid_in_col: ", self.valid_in_col(col, num))
         print("valid_in_square: ", self.valid_in_square(row, col, num))
+        print("confirm_valid: ", (
+            self.valid_in_row(row, num) and
+            self.valid_in_col(col, num) and
+            self.valid_in_square(row, col, num)
+        ))
         return (
             self.valid_in_row(row, num) and
             self.valid_in_col(col, num) and
@@ -48,20 +53,24 @@ class Board:
 
     def valid_in_row(self, row, num):
         row_values = self.board[row]
-        print("Row value: ",row_values)
         return num not in row_values
 
     def valid_in_col(self, col, num):  
         for row in range(len(self.board)):
             if self.board[row][col] == num:
-                print("row in valid_in_col: ", row)
-                print("col in valid_in_col: ", col)
-                print("Col value: ",self.board[row][col])
                 return False
         return True 
 
     def valid_in_square(self, row, col, num):
-        pass
+        row_start = (row // 3) * 3
+        col_start = (col // 3) * 3
+        print("row_start: ", row_start)
+        print("col_start: ", col_start)
+        for row_no in range(row_start, row_start + 3):
+            for col_no in range(col_start, col_start + 3):
+                if self.board[row_no][col_no] == num:
+                    return False
+        return True
 
     def solve_sudoku(self):
         """
@@ -83,7 +92,7 @@ class Board:
             # Check if the guessed number is valid
             if self.confirm_valid((row, col), guess):
                 # Place the guessed number in the empty cell
-                print("Guess Placed: ", self.board[row][col])
+                print("Guess Placed: ", guess)
                 self.board[row][col] = guess
                 
                 # Recursively try solving the puzzle with the guessed number
