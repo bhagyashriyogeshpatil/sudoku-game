@@ -194,7 +194,12 @@ class Board:
             if not self.confirm_valid((row, col), num):
                 print("Invalid number. Try again.")
                 continue
+
+            # Place the guessed number in the empty cell
+            self.board[row][col] = num
             
+
+
 
 def main():
     print("Welcome to Sudoku Game")
