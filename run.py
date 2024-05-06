@@ -172,6 +172,7 @@ class Board:
                 col = int(col) - 1
                 print("col:", col)
                 num = int(num)
+                print("num:", num)
             except ValueError:
                 print("Invalid input. Please enter numbers between 1 and 9.")
                 continue
@@ -181,6 +182,11 @@ class Board:
                 print("Invalid input. Please enter numbers between 1 and 9.")
                 continue
 
+            # Check if the entered cell is empty
+            if self.board[row][col] != 0:
+                print("Cell value: ", self.board[row][col])
+                print("This cell is already filled. Try another one.")
+                continue
             
 
 def main():
