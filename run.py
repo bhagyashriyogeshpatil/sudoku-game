@@ -176,6 +176,12 @@ class Board:
                 print("Invalid input. Please enter numbers between 1 and 9.")
                 continue
 
+            # Check if the entered number is valid
+            if not (1 <= num <= 9):
+                print("Invalid input. Please enter numbers between 1 and 9.")
+                continue
+
+            
 
 def main():
     print("Welcome to Sudoku Game")
