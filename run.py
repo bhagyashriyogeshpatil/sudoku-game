@@ -187,6 +187,13 @@ class Board:
                 print("Cell value: ", self.board[row][col])
                 print("This cell is already filled. Try another one.")
                 continue
+
+            # Check if the guessed number is valid
+            valid_num = self.confirm_valid((row, col), num)
+            print("valid_num: ", valid_num)
+            if not self.confirm_valid((row, col), num):
+                print("Invalid number. Try again.")
+                continue
             
 
 def main():
