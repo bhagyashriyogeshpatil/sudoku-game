@@ -202,6 +202,10 @@ class Board:
             print("Updated board:")
             self.print_board()
 
+            # Check if the puzzle is solved
+            if self.find_empty_cell() is None:
+                print("Congratulations! You solved the puzzle.")
+                break
 
 def main():
     print("Welcome to Sudoku Game")
