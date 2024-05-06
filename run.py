@@ -168,11 +168,8 @@ class Board:
             # Convert inputs to integers
             try:
                 row = int(row) - 1
-                print("row:", row)
                 col = int(col) - 1
-                print("col:", col)
                 num = int(num)
-                print("num:", num)
             except ValueError:
                 print("Invalid input. Please enter numbers between 1 and 9.")
                 continue
@@ -184,13 +181,10 @@ class Board:
 
             # Check if the entered cell is empty
             if self.board[row][col] != 0:
-                print("Cell value: ", self.board[row][col])
                 print("This cell is already filled. Try another one.")
                 continue
 
             # Check if the guessed number is valid
-            valid_num = self.confirm_valid((row, col), num)
-            print("valid_num: ", valid_num)
             if not self.confirm_valid((row, col), num):
                 print("Invalid number. Try again.")
                 continue
