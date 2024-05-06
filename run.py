@@ -197,8 +197,10 @@ class Board:
 
             # Place the guessed number in the empty cell
             self.board[row][col] = num
-            
-
+           
+            # Print the updated board
+            print("Updated board:")
+            self.print_board()
 
 
 def main():
