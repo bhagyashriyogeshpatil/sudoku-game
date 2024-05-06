@@ -165,6 +165,18 @@ class Board:
                 print("Quitting the game.")
                 break
 
+            # Convert inputs to integers
+            try:
+                row = int(row) - 1
+                print("row:", row)
+                col = int(col) - 1
+                print("col:", col)
+                num = int(num)
+            except ValueError:
+                print("Invalid input. Please enter numbers between 1 and 9.")
+                continue
+
+
 def main():
     print("Welcome to Sudoku Game")
     puzzle = [
