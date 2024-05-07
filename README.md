@@ -25,3 +25,22 @@ The live version of the project can be viewed [here](https://sudoku-game-0aaffdd
 -	Solve Sudoku puzzles quickly and accurately.
 -	Enjoy playing Sudoku in an interactive manner.
 -	Understand the rules of Sudoku and how to use the solver effectively.
+
+##  Design
+
+###  Flowchart of Logic/Functions
+
+
+
+##  Application Features
+- 	This is a command-line interface (CLI) application without GUI functionality.
+### Python Logic
+-	Implementation of a Sudoku board class using Object-Oriented Programming (OOP) concepts, encapsulating the board and its operations within a class structure.
+-	Utilization of class methods for solving Sudoku puzzles, finding empty cells, and validating guesses.
+-	Object-oriented design principles applied for modularity, encapsulation, and code reusability.
+
+
+## Future Features
+-	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
+-	Ability to generate random Sudoku puzzles of varying difficulty levels.
+
