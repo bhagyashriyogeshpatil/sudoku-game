@@ -137,3 +137,25 @@ No errors were found.
 
 ![PEP8 CI](assets/readme_images/pylinter_report.png)
 
+## Deployment
+
+This project is deployed on Heroku.
+
+1. Login to [Heroku](https://id.heroku.com/login) or create a account.
+2. On Dashboard of Heroku, click the button labeled as "New" and from the drop-down menu select "Create New App".
+3. Please enter a unique app name.
+4. Select your region and click on "Create App" button.
+5. Within your page, navigate to "Settings" tab.
+6. Scroll down to view the "Config Vars" section and click "Reveal Config Vars".
+7. Add a Config Var with key "PORT" and value "8000".
+8. Next, scroll down to "Buildpacks" sections. Click "Add buildpack", select "python", and click "Add buildpack".
+9. Within the same section, Click "Add buildpack", select "nodejs", and click "Add buildpack".
+
+    Note: Make sure that the python buildpack is before the nodejs buildpack. If not, you can reorder them by dragging python to the top.
+
+10. Scroll up and Go to the "Deploy" tab.
+11. Scroll down to "Deployment method" and select "GitHub" as the deployment method.
+12. Search for the repository name and click "Connect" once you have found it.
+13. Scroll to the bottom of the deploy page and select the preferred deployment type.
+14. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or Manual deploy to deploy the current state of the branch you choose. I have first used the manual method and then changed it to Automatic Deploys.
+15. Once the build is complete, click "View" to be taken to your deployed app.
