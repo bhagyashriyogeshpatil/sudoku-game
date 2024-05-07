@@ -7,10 +7,11 @@ The objective is to fill a 9×9 grid (where empty cells are denoted by 0) with d
 
 The live version of the project can be viewed [here](https://sudoku-game-0aaffdda0fa8.herokuapp.com/)
 
+- - -
 ## Table of contents
 
 
-
+- - -
 ## UX
 ### Site Goal
 - Creating a fun and easy platform for Sudoku lovers to play and solve puzzles, whether they prefer manual solving or automatic solutions, with clear instructions and simple controls.
@@ -26,14 +27,15 @@ The live version of the project can be viewed [here](https://sudoku-game-0aaffdd
 -	Enjoy playing Sudoku in an interactive manner.
 -	Understand the rules of Sudoku and how to use the solver effectively.
 
+- - -
 ##  Design
-
 ###  Flowchart
 
 I used [draw.io](http://www.draw.io/) to make flow charts while working on this project. They helped me to plan the project and structure the code.
 
 ![Sudoku game Flowchart](assets/readme_images/sudoku_game_flowchart.png)
 
+- - -
 ##  Application Features
 - 	This is a command-line interface (CLI) application without GUI functionality.
 ### Python Logic
@@ -115,6 +117,7 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
 -	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
 -	Ability to generate random Sudoku puzzles of varying difficulty levels.
 
+- - -
 ## Technologies Used
 
 - **Git** Used to version control throughout my project and to ensure that a clean record is maintained.
@@ -125,11 +128,10 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
 - **<a href="https://pep8ci.herokuapp.com/">CI Python Linter</a>** Used for validation
 - **<a href="https://pypi.org/project/black/ ">Python Black Package</a>** Used for formating the code, which is python code formatter compliant with Pep8 guidelines
 
-
 **Languages Used**
 - Python
 
-
+- - -
 ## Testing
 
 ### Validations
@@ -139,6 +141,25 @@ No errors were found.
 
 ![PEP8 CI](assets/readme_images/pylinter_report.png)
 
+
+### Manual Testing
+| Feature | Action | Expected Result | Actual Result |
+|----------|--------|-----------------|--------------|
+| Play Sudoku and solve the puzzle interactively | Play the Sudoku game and interactively solve the puzzle  | Puzzle is solved successfully | Works as expected |
+| Provide a solvable puzzle and solve it automatically | Provide a solvable puzzle and run the solver algorithm | Puzzle is solved automatically | Works as expected |
+| Provide an incomplete puzzle and solve it automatically | Provide an incomplete puzzle and run the solver algorithm | Puzzle is solved automatically | Works as expected |
+| Enter invalid inputs during interactive play | Input invalid row, column, or number during interactive play | Program prompts for valid input | Works as expected |
+| Quit the game during interactive play | Enter 'q' during interactive play | Program exits the game | Works as expected |
+| Provide an already filled cell during interactive play| Try to fill a cell that is already filled | Program notifies that the cell is already filled | Works as expected |
+| Input a number outside the range (1-9) during play   | Input a number less than 1 or greater than 9 during play | Program prompts for valid input | Works as expected |
+| Enter non-numeric inputs during interactive play | Input non-numeric characters during interactive play | Program prompts for valid input |  Works as expected |
+| Play Sudoku and solve the puzzle with valid inputs | Play Sudoku and solve the puzzle with valid inputs | Puzzle is solved successfully |  Works as expected |
+| Solve a known Sudoku puzzle and verify correctness | Solve a known Sudoku puzzle and verify correctness | Solution matches expected solution |  Works as expected |
+| Provide an another puzzle and attempt to solve it, then solve it automatically | Provide an another puzzle and attempt to solve it, then solve it automatically | Puzzle is solved correctly |  Works as expected |
+
+
+
+- - -
 ## Deployment
 
 This project is deployed on Heroku.
@@ -162,6 +183,7 @@ This project is deployed on Heroku.
 14. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or Manual deploy to deploy the current state of the branch you choose. I have first used the manual method and then changed it to Automatic Deploys.
 15. Once the build is complete, click "View" to be taken to your deployed app.
 
+- - -
 ## Credits
 ### Content and resources
 
@@ -194,3 +216,5 @@ Mentor - Jubril Akolade
 
 Kay - Cohort facilitator
 - She was very helpful in making me understand the various requirements to achieve a good project.
+
+- - -
