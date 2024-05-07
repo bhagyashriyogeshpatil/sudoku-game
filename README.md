@@ -28,9 +28,11 @@ The live version of the project can be viewed [here](https://sudoku-game-0aaffdd
 
 ##  Design
 
-###  Flowchart of Logic/Functions
+###  Flowchart
 
+I used [draw.io](http://www.draw.io/) to make flow charts while working on this project. They helped me to plan the project and structure the code.
 
+![Sudoku game Flowchart](assets/readme_images/sudoku_game_flowchart.png)
 
 ##  Application Features
 - 	This is a command-line interface (CLI) application without GUI functionality.
@@ -51,7 +53,7 @@ The live version of the project can be viewed [here](https://sudoku-game-0aaffdd
 
 ## Testing
 
-## Validations
+### Validations
 Used [CI Python Linter](https://pep8ci.herokuapp.com/) to validate the Python file follow the PEP8 style guide.
 
 No errors were found.
