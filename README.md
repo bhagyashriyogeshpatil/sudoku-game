@@ -157,7 +157,22 @@ No errors were found.
 | Solve a known Sudoku puzzle and verify correctness | Solve a known Sudoku puzzle and verify correctness | Solution matches expected solution |  Works as expected |
 | Provide an another puzzle and attempt to solve it, then solve it automatically | Provide an another puzzle and attempt to solve it, then solve it automatically | Puzzle is solved correctly |  Works as expected |
 
-
+### Solved Bugs
+-  I used Python Linter to validate my code. I got the following types of notifications:
+    - trailing whitespace
+    - line too long
+    - blank line contains whitespace
+    - missing whitespace after ','
+    - expected 2 blank lines, found 1
+    - expected 2 blank lines after class or function definition, found 1
+    - missing whitespace around operator
+    - no newline at end of file
+- I used Python Black Package to fix most of the issues. 
+- Remaining issues were solved after adjusting indentation.
+- For "line too long" I have used continuation characters `\` to break the line.
+- After adding continuation characters in the code, Print statements output appear to be disorganized.
+![Disorganized Print Statements](assets/readme_images/bug_disorganized_print_statements.png)
+- I modified the print and input statements in the code based on the mentor's advice.
 
 - - -
 ## Deployment
