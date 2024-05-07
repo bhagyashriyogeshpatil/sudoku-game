@@ -193,15 +193,15 @@ class Board:
         """
         while True:
             row = input(
-                "Enter the row to insert number (1-9)\
-                    or 'q' to quit/solved puzzle: "
+                "Enter the row to insert number (1-9)"
+                " or 'q' to quit/solved puzzle: "
             )
             if row.lower() == "q":
                 print("Quitting the game.")
                 break
             col = input(
-                "Enter the column to insert number (1-9)\
-                    or 'q' to quit/solved puzzle: "
+                "Enter the column to insert number (1-9)"
+                 " or 'q' to quit/solved puzzle: "
             )
             if col.lower() == "q":
                 print("Quitting the game.")
@@ -227,8 +227,8 @@ class Board:
 
             # Check if the entered cell is empty
             if self.board[row][col] != 0:
-                print("This cell is already filled.\
-                    Please choose an empty cell.")
+                print("This cell is already filled."
+                    "Please choose an empty cell.")
                 continue
 
             # Check if the guessed number is valid
@@ -254,21 +254,22 @@ def print_game_info():
     Print information about the Sudoku game.
     """
     print("Welcome to Sudoku Game")
+
     print(
-        "This program allows you to play Sudoku interactively\
-            or \nsolve a given Sudoku puzzle."
+        "This program allows you to play Sudoku interactively or "
+        "solve a given Sudoku puzzle."
     )
     print(
-        "You can play by inserting numbers into the empty cells\
-            or \nsolve the puzzle automatically."
+        "You can play by inserting numbers into the empty cells or "
+        "solve the puzzle automatically."
     )
     print("\nTo play the game, follow these instructions:")
     print("1. Enter the row number (1-9) where you want to insert a number.")
-    print("2. Enter the column number (1-9)\
-                where you want to insert a number.")
+    print("2. Enter the column number (1-9)"
+                " where you want to insert a number.")
     print("3. Enter a number (1-9) to place in the specified row and column.")
-    print("4. Type 'q' at any time to quit the game\
-                or view the solved puzzle.\n")
+    print("4. Type 'q' at any time to quit the game"
+                " or view the solved puzzle.\n")
     print("Enjoy the game!\n")
 
 
