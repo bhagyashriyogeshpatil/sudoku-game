@@ -80,8 +80,17 @@ class Board:
         Returns:
             bool: True if the number is not present in the row, False otherwise.
         """
-        row_values = self.board[row]
-        return num not in row_values
+        try:
+            row_values = self.board[row]
+            return num not in row_values
+        except IndexError:
+            # Handle index out of bounds error
+            print("Row index is out of bounds.")
+            return False
+        except AttributeError:
+            # Handle attribute error, if self.board is not initialized properly
+            print("The board is not properly initialized.")
+            return False
 
     def valid_in_col(self, col, num): 
         """
