@@ -71,17 +71,31 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
     -	Users can interactively play Sudoku by entering their guesses for empty cells.
     -	The game provides a user-friendly interface for inputting numbers into the Sudoku grid.
 
-        ![Interactive Sudoku Game](assets/readme_images/feature_interactive_game_input_num.png)
+        ![Interactive Sudoku Game Enter Input](assets/readme_images/feature_interactive_game_input_num.png)
 
-        ![Interactive Sudoku Game](assets/readme_images/feature_interactive_game_input_num_entered.png)
+        ![Interactive Sudoku Game Entered Input](assets/readme_images/feature_interactive_game_input_num_entered.png)
 
     -	After inserting a row, column, and number in the grid, the updated game is printed, allowing users to see the state of the puzzle after each move.
 
-        ![Interactive Sudoku Game](assets/readme_images/feature_interactive_game_updated_game.png)
+        ![Interactive Sudoku Game Update game](assets/readme_images/feature_interactive_game_updated_game.png)
 
     -	Users can quit the game at any time or view the solved puzzle.
 
-        ![Interactive Sudoku Game](assets/readme_images/feature_interactive_game_quit_solved_puzzle.png)
+        ![Interactive Sudoku Game Quit game/Solved Puzzle](assets/readme_images/feature_interactive_game_quit_solved_puzzle.png)
+
+-   **Input Validation:**
+    -	The program ensures that user inputs are only within the range of 1 to 9 for row numbers, column numbers, and guessed numbers.
+
+        ![Input Validation IndexError](assets/readme_images/feature_input_validation_indexerror.png)
+
+        ![Input Validation Invalid number](assets/readme_images/feature_input_validation_invalidnumber.png)
+
+    -	It checks for valid inputs within the range of 1 to 9 and ensures that guessed numbers adhere to Sudoku rules.
+
+        ![Input Validation Cell already filled ](assets/readme_images/feature_input_validation_filledcell.png)
+
+        
+
 
 ## Future Features
 -	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
