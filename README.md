@@ -41,8 +41,13 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
 -	Utilization of class methods for solving Sudoku puzzles, finding empty cells, and validating guesses.
 -	Object-oriented design principles applied for modularity, encapsulation, and code reusability.
 
+### Features of Sudoku game
+-   **Welcome Message and Game Information:**
+    -	Upon launching the program, users are greeted with a friendly welcome message.
+    -	The welcome message provides an overview of the Sudoku game and its functionalities.
+    -	Users are informed about the options to play Sudoku interactively or solve a given puzzle automatically.
 
-
+        ![Welcome Message and Game Information](assets/readme_images/feature_welcome_msg_game_info.png)
 
 
 ## Future Features
