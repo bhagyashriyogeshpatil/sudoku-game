@@ -254,14 +254,13 @@ def print_game_info():
     Print information about the Sudoku game.
     """
     print("Welcome to Sudoku Game")
-
     print(
         "This program allows you to play Sudoku interactively or "
-        "solve a given Sudoku puzzle."
+        "\nsolve a given Sudoku puzzle."
     )
     print(
         "You can play by inserting numbers into the empty cells or "
-        "solve the puzzle automatically."
+        "\nsolve the puzzle automatically."
     )
     print("\nTo play the game, follow these instructions:")
     print("1. Enter the row number (1-9) where you want to insert a number.")
