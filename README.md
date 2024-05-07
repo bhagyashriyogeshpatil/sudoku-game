@@ -108,13 +108,24 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
         ![Sudoku Solver ](assets/readme_images/feature_error_handling_nonnumeric_char.png) 
 
         ![Sudoku Solver ](assets/readme_images/feature_input_validation_indexerror.png) 
-        
+
         ![Sudoku Solver ](assets/readme_images/feature_input_validation_invalidnumber.png) 
 
 ## Future Features
 -	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
 -	Ability to generate random Sudoku puzzles of varying difficulty levels.
 
+## Technologies Used
+
+- **Git** Used to version control throughout my project and to ensure that a clean record is maintained.
+- **GitHub**  Used to store the project's code after being pushed from Git
+- **Heroku** Used to deploy the live project
+- **GitPod** Used as an Integrated Development Environment for building this website.
+- **<a href="http://www.draw.io">Draw.io</a>** Used for flow charts.
+- **<a href="https://pep8ci.herokuapp.com/">CI Python Linter</a>** Used for validation
+
+**Languages Used**
+- Python
 
 
 ## Testing
