@@ -94,8 +94,22 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
 
         ![Input Validation Cell already filled ](assets/readme_images/feature_input_validation_filledcell.png)
 
-        
+-   **Sudoku Solver:**
+    -	The program provides a Sudoku solver based on backtracking algorithm.
+    -	It efficiently solves Sudoku puzzles of varying difficulties.
+    -	If a given puzzle is solvable, it guarantees a solution.
+    -	Users can insert ‘q’ to view the solved puzzle.
 
+        ![Sudoku Solver ](assets/readme_images/feature_sudoku_solver.png)  
+
+-   **Error Handling:**
+    -	Errors such as index out of bounds, invalid inputs are caught and appropriately handled.
+
+        ![Sudoku Solver ](assets/readme_images/feature_error_handling_nonnumeric_char.png) 
+
+        ![Sudoku Solver ](assets/readme_images/feature_input_validation_indexerror.png) 
+        
+        ![Sudoku Solver ](assets/readme_images/feature_input_validation_invalidnumber.png) 
 
 ## Future Features
 -	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
