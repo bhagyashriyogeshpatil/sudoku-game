@@ -49,3 +49,12 @@ The live version of the project can be viewed [here](https://sudoku-game-0aaffdd
 
 
 
+## Testing
+
+## Validations
+Used [CI Python Linter](https://pep8ci.herokuapp.com/) to validate the Python file follow the PEP8 style guide.
+
+No errors were found.
+
+![PEP8 CI](assets/readme_images/pylinter_report.png)
+
