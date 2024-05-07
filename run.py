@@ -1,12 +1,12 @@
-
 class Board:
     """
     Represents a Sudoku board.
     """
+
     def __init__(self, board):
         """
         Initializes a Sudoku board.
-        """       
+        """
         self.board = board
 
     def print_board(self):
@@ -19,15 +19,15 @@ class Board:
         for row in range(len(self.board)):
             for col in range(len(self.board[0])):
                 if col == 0:
-                    print(" | ", end='')
+                    print(" | ", end="")
                 if col != 8:
-                    print(self.board[row][col], end=' ')
+                    print(self.board[row][col], end=" ")
                 else:
-                    print(self.board[row][col], end='')
+                    print(self.board[row][col], end="")
                 if (col + 1) % 3 == 0:
-                    print(" | ", end='')
+                    print(" | ", end="")
             if (row + 1) % 3 == 0:
-                print("\n-----------------------------", end='')
+                print("\n-----------------------------", end="")
             print()
 
     def find_empty_cell(self):
@@ -35,7 +35,8 @@ class Board:
         Find the first empty cell in the Sudoku board.
 
         Returns:
-            tuple or None: A tuple containing the row and column indices of the first empty cell,
+            tuple or None: A tuple containing the row and
+                column indices of the first empty cell,
                 or None if no empty cell is found.
         """
         for row in range(len(self.board)):
@@ -52,7 +53,8 @@ class Board:
         Check if placing a number in a specific cell is valid.
 
         Args:
-            empty (tuple): A tuple containing the row and column indices of the cell.
+            empty (tuple): A tuple containing the row and
+                column indices of the cell.
             num (int): The number to be placed in the cell.
 
         Returns:
@@ -61,9 +63,9 @@ class Board:
         try:
             row, col = empty
             return (
-                self.valid_in_row(row, num) and
-                self.valid_in_col(col, num) and
-                self.valid_in_square(row, col, num)
+                self.valid_in_row(row, num)
+                and self.valid_in_col(col, num)
+                and self.valid_in_square(row, col, num)
             )
         except Exception as e:
             # Handle any other exceptions
@@ -78,7 +80,8 @@ class Board:
             num (int): The number to be checked.
 
         Returns:
-            bool: True if the number is not present in the row, False otherwise.
+            bool: True if the number is not present in the row,
+                False otherwise.
         """
         try:
             row_values = self.board[row]
@@ -92,7 +95,7 @@ class Board:
             print("The board is not properly initialized.")
             return False
 
-    def valid_in_col(self, col, num): 
+    def valid_in_col(self, col, num):
         """
         Check if a number is valid in a specific column.
 
@@ -101,13 +104,14 @@ class Board:
             num (int): The number to be checked.
 
         Returns:
-            bool: True if the number is not present in the column, False otherwise.
-        """ 
+            bool: True if the number is not present in the column,
+                False otherwise.
+        """
         try:
             for row in range(len(self.board)):
                 if self.board[row][col] == num:
                     return False
-            return True 
+            return True
         except IndexError:
             # Handle index out of bounds error
             print("Column index is out of bounds.")
@@ -127,7 +131,8 @@ class Board:
             num (int): The number to be checked.
 
         Returns:
-            bool: True if the number is not present in the square, False otherwise.
+            bool: True if the number is not present in the square,
+                False otherwise.
         """
         try:
             row_start = (row // 3) * 3
@@ -166,36 +171,43 @@ class Board:
                 if self.confirm_valid((row, col), guess):
                     # Place the guessed number in the empty cell
                     self.board[row][col] = guess
-                    
-                    # Recursively try solving the puzzle with the guessed number
+
+                    # Recursively try solving the puzzle with guessed number
                     if self.solve_sudoku():
                         return True
-                    
+
                     # If the guess leads to a dead end, backtrack
                     self.board[row][col] = 0
 
             except ValueError:
                 # If an invalid guess is encountered, backtrack
                 self.board[row][col] = 0
-                
+
         # If no number can be placed in the empty cell, backtrack
         return False
 
     def play_sudoku(self):
         """
-        Allows users to play Sudoku interactively by entering their guesses for empty cells.
+        Allows users to play Sudoku interactively by entering
+            their guesses for empty cells.
         """
         while True:
-            row = input("Enter the row to insert number (1-9) or 'q' to quit/solved puzzle: ")
-            if row.lower() == 'q':
+            row = input(
+                "Enter the row to insert number (1-9)\
+                    or 'q' to quit/solved puzzle: "
+            )
+            if row.lower() == "q":
                 print("Quitting the game.")
                 break
-            col = input("Enter the column to insert number (1-9) or 'q' to quit/solved puzzle: ")
-            if col.lower() == 'q':
+            col = input(
+                "Enter the column to insert number (1-9)\
+                    or 'q' to quit/solved puzzle: "
+            )
+            if col.lower() == "q":
                 print("Quitting the game.")
                 break
             num = input("Enter a number (1-9) or 'q' to quit/solved puzzle: ")
-            if num.lower() == 'q':
+            if num.lower() == "q":
                 print("Quitting the game.")
                 break
 
@@ -215,7 +227,8 @@ class Board:
 
             # Check if the entered cell is empty
             if self.board[row][col] != 0:
-                print("This cell is already filled. Please choose an empty cell.")
+                print("This cell is already filled.\
+                    Please choose an empty cell.")
                 continue
 
             # Check if the guessed number is valid
@@ -225,7 +238,7 @@ class Board:
 
             # Place the guessed number in the empty cell
             self.board[row][col] = num
-           
+
             # Print the updated board
             print("Updated board:")
             self.print_board()
@@ -235,43 +248,54 @@ class Board:
                 print("Congratulations! You solved the puzzle.")
                 break
 
+
 def print_game_info():
     """
     Print information about the Sudoku game.
     """
     print("Welcome to Sudoku Game")
-    print("This program allows you to play Sudoku interactively or \nsolve a given Sudoku puzzle.")
-    print("You can play by inserting numbers into the empty cells or \nsolve the puzzle automatically.")
+    print(
+        "This program allows you to play Sudoku interactively\
+            or \nsolve a given Sudoku puzzle."
+    )
+    print(
+        "You can play by inserting numbers into the empty cells\
+            or \nsolve the puzzle automatically."
+    )
     print("\nTo play the game, follow these instructions:")
     print("1. Enter the row number (1-9) where you want to insert a number.")
-    print("2. Enter the column number (1-9) where you want to insert a number.")
+    print("2. Enter the column number (1-9)\
+                where you want to insert a number.")
     print("3. Enter a number (1-9) to place in the specified row and column.")
-    print("4. Type 'q' at any time to quit the game or view the solved puzzle.\n")
+    print("4. Type 'q' at any time to quit the game\
+                or view the solved puzzle.\n")
     print("Enjoy the game!\n")
+
 
 def main():
     print_game_info()
     puzzle = [
-        [7,8,0,4,0,0,1,2,0],
-        [6,0,0,0,7,5,0,0,9],
-        [0,0,0,6,0,1,0,7,8],
-        [0,0,7,0,4,0,2,6,0],
-        [0,0,1,0,5,0,9,3,0],
-        [9,0,4,0,6,0,0,0,5],
-        [0,7,0,3,0,0,0,1,2],
-        [1,2,0,0,0,7,4,0,0],
-        [0,4,9,2,0,6,0,0,7]
+        [7, 8, 0, 4, 0, 0, 1, 2, 0],
+        [6, 0, 0, 0, 7, 5, 0, 0, 9],
+        [0, 0, 0, 6, 0, 1, 0, 7, 8],
+        [0, 0, 7, 0, 4, 0, 2, 6, 0],
+        [0, 0, 1, 0, 5, 0, 9, 3, 0],
+        [9, 0, 4, 0, 6, 0, 0, 0, 5],
+        [0, 7, 0, 3, 0, 0, 0, 1, 2],
+        [1, 2, 0, 0, 0, 7, 4, 0, 0],
+        [0, 4, 9, 2, 0, 6, 0, 0, 7],
     ]
     gameboard = Board(puzzle)
-    print('Puzzle to solve:')
+    print("Puzzle to solve:")
     gameboard.print_board()
     print("\nLet's play Sudoku!\n")
     gameboard.play_sudoku()
     if gameboard.solve_sudoku():
-        print('\nSolved puzzle:')
-        gameboard.print_board()    
+        print("\nSolved puzzle:")
+        gameboard.print_board()
     else:
-        print('\nThe provided puzzle is unsolvable.')
+        print("\nThe provided puzzle is unsolvable.")
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()

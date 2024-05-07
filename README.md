@@ -1,7 +1,7 @@
 # Sudoku Game
 This is a simple Sudoku game implemented as a Command Line Interface (CLI)  project using Python. It allows users to play Sudoku interactively by entering their guesses for empty cells. The game also provides a solver that uses a backtracking algorithm to solve the Sudoku puzzle.
 
-The objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.
+The objective is to fill a 9×9 grid (where empty cells are denoted by 0) with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.
 
 ![Responsive Image]()
 
@@ -40,7 +40,12 @@ The live version of the project can be viewed [here](https://sudoku-game-0aaffdd
 -	Object-oriented design principles applied for modularity, encapsulation, and code reusability.
 
 
+
+
+
 ## Future Features
 -	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
 -	Ability to generate random Sudoku puzzles of varying difficulty levels.
+
+
 
