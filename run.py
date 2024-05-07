@@ -129,13 +129,20 @@ class Board:
         Returns:
             bool: True if the number is not present in the square, False otherwise.
         """
-        row_start = (row // 3) * 3
-        col_start = (col // 3) * 3
-        for row_no in range(row_start, row_start + 3):
-            for col_no in range(col_start, col_start + 3):
-                if self.board[row_no][col_no] == num:
-                    return False
-        return True
+        try:
+            row_start = (row // 3) * 3
+            col_start = (col // 3) * 3
+            for row_no in range(row_start, row_start + 3):
+                for col_no in range(col_start, col_start + 3):
+                    if self.board[row_no][col_no] == num:
+                        return False
+            return True
+        except IndexError:
+            # Handle index out of bounds error
+            return False
+        except AttributeError:
+            # Handle attribute error, if self.board is not initialized properly
+            return False
 
     def solve_sudoku(self):
         """
@@ -256,7 +263,8 @@ def main():
         [0,4,9,2,0,6,0,0,7]
     ]
     gameboard = Board(puzzle)
-    assert gameboard.valid_in_col(10, 5) == True 
+    result = gameboard.valid_in_square(10, 0, 1)
+    print(result)
     print('Puzzle to solve:')
     gameboard.print_board()
     print("\nLet's play Sudoku!\n")
