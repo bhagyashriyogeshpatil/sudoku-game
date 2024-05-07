@@ -201,7 +201,7 @@ class Board:
                 break
             col = input(
                 "Enter the column to insert number (1-9)"
-                 " or 'q' to quit/solved puzzle: "
+                " or 'q' to quit/solved puzzle: "
             )
             if col.lower() == "q":
                 print("Quitting the game.")
@@ -228,7 +228,7 @@ class Board:
             # Check if the entered cell is empty
             if self.board[row][col] != 0:
                 print("This cell is already filled."
-                    "Please choose an empty cell.")
+                      "Please choose an empty cell.")
                 continue
 
             # Check if the guessed number is valid
@@ -266,10 +266,10 @@ def print_game_info():
     print("\nTo play the game, follow these instructions:")
     print("1. Enter the row number (1-9) where you want to insert a number.")
     print("2. Enter the column number (1-9)"
-                " where you want to insert a number.")
+          " where you want to insert a number.")
     print("3. Enter a number (1-9) to place in the specified row and column.")
     print("4. Type 'q' at any time to quit the game"
-                " or view the solved puzzle.\n")
+          " or view the solved puzzle.\n")
     print("Enjoy the game!\n")
 
 
