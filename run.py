@@ -58,12 +58,17 @@ class Board:
         Returns:
             bool: True if placing the number is valid, False otherwise.
         """
-        row, col = empty
-        return (
-            self.valid_in_row(row, num) and
-            self.valid_in_col(col, num) and
-            self.valid_in_square(row, col, num)
-        )
+        try:
+            row, col = empty
+            return (
+                self.valid_in_row(row, num) and
+                self.valid_in_col(col, num) and
+                self.valid_in_square(row, col, num)
+            )
+        except Exception as e:
+            # Handle any other exceptions
+            print(f"An error occurred: {e}")
+            return False
 
     def valid_in_row(self, row, num):
         """
@@ -143,7 +148,7 @@ class Board:
                     
                     # If the guess leads to a dead end, backtrack
                     self.board[row][col] = 0
-                    
+
             except ValueError:
                 # If an invalid guess is encountered, backtrack
                 self.board[row][col] = 0
