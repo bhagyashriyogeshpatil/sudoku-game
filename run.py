@@ -240,13 +240,13 @@ def print_game_info():
     Print information about the Sudoku game.
     """
     print("Welcome to Sudoku Game")
-    print("This program allows you to play Sudoku interactively or solve a given Sudoku puzzle.")
-    print("You can play by inserting numbers into the empty cells or solve the puzzle automatically.")
+    print("This program allows you to play Sudoku interactively or \nsolve a given Sudoku puzzle.")
+    print("You can play by inserting numbers into the empty cells or \nsolve the puzzle automatically.")
     print("\nTo play the game, follow these instructions:")
     print("1. Enter the row number (1-9) where you want to insert a number.")
     print("2. Enter the column number (1-9) where you want to insert a number.")
     print("3. Enter a number (1-9) to place in the specified row and column.")
-    print("4. Type 'q' at any time to quit the game or if the puzzle is solved.\n")
+    print("4. Type 'q' at any time to quit the game or view the solved puzzle.\n")
     print("Enjoy the game!\n")
 
 def main():
@@ -263,8 +263,6 @@ def main():
         [0,4,9,2,0,6,0,0,7]
     ]
     gameboard = Board(puzzle)
-    result = gameboard.valid_in_square(10, 0, 1)
-    print(result)
     print('Puzzle to solve:')
     gameboard.print_board()
     print("\nLet's play Sudoku!\n")
