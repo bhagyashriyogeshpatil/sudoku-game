@@ -3,7 +3,7 @@ This is a simple Sudoku game implemented as a Command Line Interface (CLI)  proj
 
 The objective is to fill a 9×9 grid (where empty cells are denoted by 0) with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.
 
-![Responsive Image]()
+![Responsive Mockup](assets/readme_images/responsive_mockup.png)
 
 The live version of the project can be viewed [here](https://sudoku-game-0aaffdda0fa8.herokuapp.com/)
 
