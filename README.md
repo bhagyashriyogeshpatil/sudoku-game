@@ -123,6 +123,8 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
 - **GitPod** Used as an Integrated Development Environment for building this website.
 - **<a href="http://www.draw.io">Draw.io</a>** Used for flow charts.
 - **<a href="https://pep8ci.herokuapp.com/">CI Python Linter</a>** Used for validation
+- **<a href="https://pypi.org/project/black/ ">Python Black Package</a>** Used for formating the code, which is python code formatter compliant with Pep8 guidelines
+
 
 **Languages Used**
 - Python
@@ -159,3 +161,36 @@ This project is deployed on Heroku.
 13. Scroll to the bottom of the deploy page and select the preferred deployment type.
 14. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github or Manual deploy to deploy the current state of the branch you choose. I have first used the manual method and then changed it to Automatic Deploys.
 15. Once the build is complete, click "View" to be taken to your deployed app.
+
+## Credits
+### Content and resources
+
+1. Code Used
+    - I used [this You Tube tutorial](https://www.youtube.com/watch?v=eqUwSA0xI-s&t=871s) to gather inspiration and ideas for developing the Sudoku game app.
+    - I used [this You Tube tutorial](https://www.youtube.com/watch?v=lK4N8E6uNr4) to understanding Backtracking algorithm to find a solution to any solvable sudoku board.
+2. Code Institute
+	- Course content for the portfolio project3 helped greatly in understanding the need to complete the project.
+	- The Love Sandwich project helped me understand various requirements from python point of view.
+3. W3 School
+	- Used to reference python related object oriented programming concepts and methods.
+4. stackoverflow
+	- Used to refer some python related workaround.
+5. Draw.io
+	- Used to create a flow chart to illustrate my project idea.
+6. CI Python Linter
+	- Used for validation to ensure cleaner, more consistent code and to improve the overall quality of software projects.
+7. Python Black Package
+	- Used to automatically format Python code according to a standardized style, enhancing code readability and maintainability.
+8. Freecodecamp youtube channel
+    - Used to understand Usecase of `if __name__ == "__main__":` block for code modularity and reusability
+    - Used to reference python related object oriented programming concepts
+
+
+### Acknowledgements
+I would like to acknowledge:
+
+Mentor - Jubril Akolade
+- My Mentor provided feedback and guidance throughout.
+
+Kay - Cohort facilitator
+- She was very helpful in making me understand the various requirements to achieve a good project.
