@@ -1,8 +1,27 @@
 # Sudoku Game
-This is a simple Sudoku game implemented in Python. It allows users to play Sudoku interactively by entering their guesses for empty cells. The game also provides a solver that uses a backtracking algorithm to solve the Sudoku puzzle.
+This is a simple Sudoku game implemented as a Command Line Interface (CLI)  project using Python. It allows users to play Sudoku interactively by entering their guesses for empty cells. The game also provides a solver that uses a backtracking algorithm to solve the Sudoku puzzle.
+
 The objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.
 
-
+![Responsive Image]()
 
 The live version of the project can be viewed [here](https://sudoku-game-0aaffdda0fa8.herokuapp.com/)
 
+## Table of contents
+
+
+
+## UX
+### Site Goal
+- Creating a fun and easy platform for Sudoku lovers to play and solve puzzles, whether they prefer manual solving or automatic solutions, with clear instructions and simple controls.
+
+### User Stories
+-	As a Sudoku enthusiast, I want to be able to solve Sudoku puzzles efficiently.
+-	As a beginner in Sudoku, I want to play Sudoku interactively to improve my skills.
+-	As a user, I want clear instructions on how to use the Sudoku solver and play the game.
+
+
+### User Goals
+-	Solve Sudoku puzzles quickly and accurately.
+-	Enjoy playing Sudoku in an interactive manner.
+-	Understand the rules of Sudoku and how to use the solver effectively.
