@@ -53,7 +53,15 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
     -	The program provides clear and concise instructions for users on how to play the Sudoku game interactively.
     -	Users are guided on how to input row numbers, column numbers, and numbers to place in the grid.
     -	Additionally, users are informed about how to quit the game or view the solved puzzle at any time.
+    
         ![Informative Instructions](assets/readme_images/feature_instructions.png)
+
+-   **Sudoku Puzzle Provided:**
+    -	The program offers a pre-defined Sudoku puzzle to solve or play interactively.
+
+        ![Sudoku Puzzle Provided](assets/readme_images/feature_puzzle_provided_readable_output.png)
+
+
 
 ## Future Features
 -	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
