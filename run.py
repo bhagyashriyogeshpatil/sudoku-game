@@ -103,10 +103,19 @@ class Board:
         Returns:
             bool: True if the number is not present in the column, False otherwise.
         """ 
-        for row in range(len(self.board)):
-            if self.board[row][col] == num:
-                return False
-        return True 
+        try:
+            for row in range(len(self.board)):
+                if self.board[row][col] == num:
+                    return False
+            return True 
+        except IndexError:
+            # Handle index out of bounds error
+            print("Column index is out of bounds.")
+            return False
+        except TypeError:
+            # Handle type error, if self.board is not a proper list of lists
+            print("The board is not properly formatted.")
+            return False
 
     def valid_in_square(self, row, col, num):
         """
@@ -247,6 +256,7 @@ def main():
         [0,4,9,2,0,6,0,0,7]
     ]
     gameboard = Board(puzzle)
+    assert gameboard.valid_in_col(10, 5) == True 
     print('Puzzle to solve:')
     gameboard.print_board()
     print("\nLet's play Sudoku!\n")
