@@ -181,12 +181,12 @@ class Board:
 
             # Check if the entered cell is empty
             if self.board[row][col] != 0:
-                print("This cell is already filled. Try another one.")
+                print("This cell is already filled. Please choose an empty cell.")
                 continue
 
             # Check if the guessed number is valid
             if not self.confirm_valid((row, col), num):
-                print("Invalid number. Try again.")
+                print("Invalid number. Please choose a different number.")
                 continue
 
             # Place the guessed number in the empty cell
