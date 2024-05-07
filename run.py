@@ -131,17 +131,21 @@ class Board:
 
         # Try placing numbers 1 to 9 in the empty cell
         for guess in range(1, 10):
-            
-            # Check if the guessed number is valid
-            if self.confirm_valid((row, col), guess):
-                # Place the guessed number in the empty cell
-                self.board[row][col] = guess
-                
-                # Recursively try solving the puzzle with the guessed number
-                if self.solve_sudoku():
-                    return True
-                
-                # If the guess leads to a dead end, backtrack
+            try:
+                # Check if the guessed number is valid
+                if self.confirm_valid((row, col), guess):
+                    # Place the guessed number in the empty cell
+                    self.board[row][col] = guess
+                    
+                    # Recursively try solving the puzzle with the guessed number
+                    if self.solve_sudoku():
+                        return True
+                    
+                    # If the guess leads to a dead end, backtrack
+                    self.board[row][col] = 0
+                    
+            except ValueError:
+                # If an invalid guess is encountered, backtrack
                 self.board[row][col] = 0
                 
         # If no number can be placed in the empty cell, backtrack
