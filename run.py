@@ -201,8 +201,22 @@ class Board:
                 print("Congratulations! You solved the puzzle.")
                 break
 
-def main():
+def print_game_info():
+    """
+    Print information about the Sudoku game.
+    """
     print("Welcome to Sudoku Game")
+    print("This program allows you to play Sudoku interactively or solve a given Sudoku puzzle.")
+    print("You can play by inserting numbers into the empty cells or solve the puzzle automatically.")
+    print("\nTo play the game, follow these instructions:")
+    print("1. Enter the row number (1-9) where you want to insert a number.")
+    print("2. Enter the column number (1-9) where you want to insert a number.")
+    print("3. Enter a number (1-9) to place in the specified row and column.")
+    print("4. Type 'q' at any time to quit the game or if the puzzle is solved.\n")
+    print("Enjoy the game!\n")
+
+def main():
+    print_game_info()
     puzzle = [
         [7,8,0,4,0,0,1,2,0],
         [6,0,0,0,7,5,0,0,9],
