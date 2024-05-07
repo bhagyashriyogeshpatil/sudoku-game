@@ -67,6 +67,22 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
 
         ![Readable Output](assets/readme_images/feature_puzzle_provided_readable_output.png)
 
+-   **Interactive Sudoku Game:**
+    -	Users can interactively play Sudoku by entering their guesses for empty cells.
+    -	The game provides a user-friendly interface for inputting numbers into the Sudoku grid.
+
+        ![Interactive Sudoku Game](assets/readme_images/feature_interactive_game_input_num.png)
+
+        ![Interactive Sudoku Game](assets/readme_images/feature_interactive_game_input_num_entered.png)
+
+    -	After inserting a row, column, and number in the grid, the updated game is printed, allowing users to see the state of the puzzle after each move.
+
+        ![Interactive Sudoku Game](assets/readme_images/feature_interactive_game_updated_game.png)
+
+    -	Users can quit the game at any time or view the solved puzzle.
+
+        ![Interactive Sudoku Game](assets/readme_images/feature_interactive_game_quit_solved_puzzle.png)
+
 ## Future Features
 -	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
 -	Ability to generate random Sudoku puzzles of varying difficulty levels.
