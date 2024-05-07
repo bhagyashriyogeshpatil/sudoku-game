@@ -192,61 +192,71 @@ class Board:
             their guesses for empty cells.
         """
         while True:
-            row = input(
-                "Enter the row to insert number (1-9)"
-                " or 'q' to quit/solved puzzle: "
-            )
-            if row.lower() == "q":
-                print("Quitting the game.")
-                break
-            col = input(
-                "Enter the column to insert number (1-9)"
-                " or 'q' to quit/solved puzzle: "
-            )
-            if col.lower() == "q":
-                print("Quitting the game.")
-                break
-            num = input("Enter a number (1-9) or 'q' to quit/solved puzzle: ")
-            if num.lower() == "q":
-                print("Quitting the game.")
-                break
-
-            # Convert inputs to integers
             try:
+                row = input(
+                    "Enter the row to insert number (1-9)"
+                    " or 'q' to quit/solved puzzle: "
+                )
+                if row.lower() == "q":
+                    print("Quitting the game.")
+                    break
+                col = input(
+                    "Enter the column to insert number (1-9)"
+                    " or 'q' to quit/solved puzzle: "
+                )
+                if col.lower() == "q":
+                    print("Quitting the game.")
+                    break
+                num = input(
+                    "Enter a number (1-9)"
+                    " or 'q' to quit/solved puzzle: "
+                )
+                if num.lower() == "q":
+                    print("Quitting the game.")
+                    break
+
+                # Convert inputs to integers
                 row = int(row) - 1
                 col = int(col) - 1
                 num = int(num)
+
+                # Check if the entered number is valid
+                if not (1 <= num <= 9):
+                    print("Invalid input."
+                          "Please enter numbers between 1 and 9.")
+                    continue
+
+                # Check if the entered cell is empty
+                if self.board[row][col] != 0:
+                    print("This cell is already filled."
+                          "Please choose an empty cell.")
+                    continue
+
+                # Check if the guessed number is valid
+                if not self.confirm_valid((row, col), num):
+                    print("Invalid number. Please choose a different number.")
+                    continue
+
+                # Place the guessed number in the empty cell
+                self.board[row][col] = num
+
+                # Print the updated board
+                print("Updated board:")
+                self.print_board()
+
+                # Check if the puzzle is solved
+                if self.find_empty_cell() is None:
+                    print("Congratulations! You solved the puzzle.")
+                    break
+
             except ValueError:
                 print("Invalid input. Please enter numbers between 1 and 9.")
-                continue
 
-            # Check if the entered number is valid
-            if not (1 <= num <= 9):
-                print("Invalid input. Please enter numbers between 1 and 9.")
-                continue
-
-            # Check if the entered cell is empty
-            if self.board[row][col] != 0:
-                print("This cell is already filled."
-                      "Please choose an empty cell.")
-                continue
-
-            # Check if the guessed number is valid
-            if not self.confirm_valid((row, col), num):
-                print("Invalid number. Please choose a different number.")
-                continue
-
-            # Place the guessed number in the empty cell
-            self.board[row][col] = num
-
-            # Print the updated board
-            print("Updated board:")
-            self.print_board()
-
-            # Check if the puzzle is solved
-            if self.find_empty_cell() is None:
-                print("Congratulations! You solved the puzzle.")
-                break
+            except IndexError as e:
+                print(
+                    f"IndexError occurred: {e}."
+                    "Please make sure your input is within the correct range."
+                )
 
 
 def print_game_info():
