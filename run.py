@@ -269,8 +269,8 @@ def print_game_info():
         "\nsolve a given Sudoku puzzle."
     )
     print(
-        "You can play by inserting numbers into the empty cells or "
-        "\nsolve the puzzle automatically."
+        "You can play by inserting numbers into the empty cells "
+        "\n (which are marked as 0) or solve the puzzle automatically."
     )
     print("\nTo play the game, follow these instructions:")
     print("1. Enter the row number (1-9) where you want to insert a number.")

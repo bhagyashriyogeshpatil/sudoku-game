@@ -1,14 +1,40 @@
-# Sudoku Game
+# Sudoku Game <a name="title"></a>
 This is a simple Sudoku game implemented as a Command Line Interface (CLI)  project using Python. It allows users to play Sudoku interactively by entering their guesses for empty cells. The game also provides a solver that uses a backtracking algorithm to solve the Sudoku puzzle.
 
-The objective is to fill a 9×9 grid (where empty cells are denoted by 0) with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.
 
 ![Responsive Mockup](assets/readme_images/responsive_mockup.png)
 
 The live version of the project can be viewed [here](https://sudoku-game-0aaffdda0fa8.herokuapp.com/)
 
 - - -
-## Table of contents
+## Table of contents <a name="toc"></a>
+- [Title](#title)
+- [Introduction](#intro)
+- [UX](#ux)
+  - [Site Goal](#site-goal)
+  - [User Stories](#user-stories)
+  - [User Goals](#user-goals)
+- [Design](#design)
+  - [Flowchart](#flowchart)
+- [Application Features](#application-features)
+  - [Python Logic](#python-logic)
+  - [Features of Sudoku game](#features-of-sudoku-game)
+- [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+  - [Validations](#validations)
+  - [Manual Testing](#manual-testing)
+  - [Solved Bugs](#solved-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Content and resources](#content-and-resources)
+  - [Acknowledgements](#acknowledgements)
+
+
+- - -
+## Introduction 
+
+This project provides a Python implementation of a Sudoku solver and interactive Sudoku game. The objective is to fill a 9×9 grid (where empty cells are denoted by 0) with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9. The solver uses a backtracking algorithm to find the solution for a given Sudoku puzzle, while the interactive game allows users to play Sudoku by entering their guesses for empty cells.
 
 
 - - -
@@ -35,6 +61,7 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
 
 ![Sudoku game Flowchart](assets/readme_images/sudoku_game_flowchart.png)
 
+[Return to Table of Contents](#toc)
 - - -
 ##  Application Features
 - 	This is a command-line interface (CLI) application without GUI functionality.
@@ -117,6 +144,7 @@ I used [draw.io](http://www.draw.io/) to make flow charts while working on this 
 -	Integration with a graphical user interface (GUI) for a more visually appealing gameplay experience.
 -	Ability to generate random Sudoku puzzles of varying difficulty levels.
 
+[Return to Table of Contents](#toc)
 - - -
 ## Technologies Used
 
@@ -139,7 +167,7 @@ Used [CI Python Linter](https://pep8ci.herokuapp.com/) to validate the Python fi
 
 No errors were found.
 
-![PEP8 CI](assets/readme_images/pylinter_report.png)
+![PEP8 CI](assets/readme_images/ci_pylinter_report.png)
 
 
 ### Manual Testing
@@ -174,6 +202,7 @@ No errors were found.
 ![Disorganized Print Statements](assets/readme_images/bug_disorganized_print_statements.png)
 - I modified the print and input statements in the code based on the mentor's advice.
 
+[Return to Table of Contents](#toc)
 - - -
 ## Deployment
 
@@ -232,4 +261,5 @@ Mentor - Jubril Akolade
 Kay - Cohort facilitator
 - She was very helpful in making me understand the various requirements to achieve a good project.
 
+[Return to Table of Contents](#toc)
 - - -
